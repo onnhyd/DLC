@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DLC Tracker</title>
+		<link rel="stylesheet" href="CSS.css" />
+	</head>
+	<body>
+		<div class="App">
+			<h1 class="center-text">DLC Tracker</h1>
+
+			<div class="entry-section">
+				<div class="vertical-layout">
+					<div>
+						<h2>Machine</h2>
+						<div id="machineSelectionContainer"></div>
+					</div>
+
+					<div class="tank-input-section">
+						<h2>Tank No.</h2>
+						<input id="inputValue" type="text" />
+					</div>
+
+					<div>
+						<h2>Route</h2>
+						<div id="routeSelectionContainer"></div>
+					</div>
+				</div>
+
+				<button id="addProcessBtn">Add Process</button>
+			</div>
+
+			<h2>Ongoing Processes</h2>
+			<div id="processListContainer"></div>
+
+			<h2>Developed Processes</h2>
+			<div id="developedListContainer"></div>
+		</div>
+
+		<!-- Link to the external JavaScript file -->
+		<script src="JS.js"></script>
+	</body>
+</html>
