@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const addProcessEntry = () => {
 		if (!selectedMachine || !selectedRoute || !inputValueElement.value) {
-			alert("Please select a machine, a route and enter a tank number.");
+			alert("Please select a machine, a route, and enter a tank number.");
 			return;
 		}
 
@@ -113,15 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			processDiv.className = "process-list-item";
 
 			const machineInfo = document.createElement("div");
-			machineInfo.innerHTML = <strong>${process.machine}</strong> - ${process.tankNo} (<em>${process.route}</em>);
+			machineInfo.innerHTML = `<strong>${process.machine}</strong> - ${process.tankNo} (<em>${process.route}</em>)`; // Corrected syntax
 
 			const stageClock = document.createElement("div");
 			stageClock.innerText = `Current Stage: ${
 				process.stages[process.stageIndex]
-			} - Time: ${formatTime(process.stageTime)}`;
+			} - Time: ${formatTime(process.stageTime)}`; // Corrected syntax
 
 			const totalClock = document.createElement("div");
-			totalClock.innerText = Total Time: ${formatTime(process.totalTime)};
+			totalClock.innerText = `Total Time: ${formatTime(process.totalTime)}`; // Corrected syntax
 
 			const nextStageBtn = document.createElement("button");
 			nextStageBtn.innerText = "Next Stage";
@@ -178,13 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			processDiv.className = "developed-list-item";
 
 			const machineInfo = document.createElement("div");
-			machineInfo.innerHTML = <strong>${process.machine}</strong> - ${process.tankNo} (<em>${process.route}</em>);
+			machineInfo.innerHTML = `<strong>${process.machine}</strong> - ${process.tankNo} (<em>${process.route}</em>)`; // Corrected syntax
 
 			const totalClock = document.createElement("div");
-			totalClock.innerText = Total Time: ${formatTime(process.totalTime)};
+			totalClock.innerText = `Total Time: ${formatTime(process.totalTime)}`; // Corrected syntax
 
 			const completedTime = document.createElement("div");
-			completedTime.innerText = Completed at: ${process.developedTime};
+			completedTime.innerText = `Completed at: ${process.developedTime}`; // Corrected syntax
 
 			processDiv.appendChild(machineInfo);
 			processDiv.appendChild(totalClock);
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			.toString()
 			.padStart(2, "0");
 		const seconds = (timeInSeconds % 60).toString().padStart(2, "0");
-		return ${hours}:${minutes}:${seconds};
+		return `${hours}:${minutes}:${seconds}`; // Corrected syntax
 	};
 
 	addProcessBtn.addEventListener("click", addProcessEntry);
